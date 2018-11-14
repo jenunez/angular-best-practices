@@ -5,5 +5,5 @@ import { SignInComponent } from './users/sign-in.component';
 
 export const appRoutes : Routes = [
   { path: 'catalog', component: CatalogComponent, },
-  {path: 'users', loadChildren: 'app/users/users.module#UsersModule'},
+  {path: 'users', loadChildren: 'app/users/users.module#UsersModule'}, //For any URL that stars with 'users' load 'UserModule' from 'app/users/users.module'
 ];
