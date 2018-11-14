@@ -24,6 +24,10 @@ export class CatalogComponent implements OnInit {
       .subscribe(classes => { this.classes = classes; this.applyFilter('')});
   }
 
+  mutateFirstProfessor() {
+    this.visibleClasses[0].professor = "Zebraman";
+  }
+
   enroll(classToEnroll) {
     classToEnroll.processing = true;
     this.userRepository.enroll(classToEnroll.classId)
