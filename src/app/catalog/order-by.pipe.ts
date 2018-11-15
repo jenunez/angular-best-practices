@@ -1,10 +1,12 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'orderBy'
+  name: 'orderBy',
+  pure: true
 })
 export class OrderByPipe implements PipeTransform {
   transform(array: any[], field: string): any[] {
+    console.log("Sorting");
     if (!Array.isArray(array)) {
       return array;
     }
